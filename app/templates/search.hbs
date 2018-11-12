@@ -1,0 +1,15 @@
+<div class="container-fluid h-100">
+  <div class="col-xs-12">
+    <h1 class="h1 font-weight-bold">Rental Cars</h1>
+    <p class="lead">
+      Search for cars to rent in your location.
+    </p>
+  </div>
+  {{search-component
+      fetchData='fetchData'
+      clearData='clearData'
+      locations=locations
+  }}
+</div>
+
+{{outlet}}

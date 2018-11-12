@@ -1,0 +1,26 @@
+<div class="container h-100">
+  <form>
+    <div class="form-group calculator col-12 h-100">
+      <div class="input-group mx-auto col-6 justify-content-center align-items-center h-100">
+        <h1>Where are you going?</h1>
+        <h4>Pick-up location</h4>
+        <div class="dropdown">
+          <div id="menu" class="dropdown-menu" aria-labelledby="dropdown_coins">
+            <form class="">
+              {{#power-select
+                placeholder='city, airport, station, region, district...'
+                options=locationNames
+                selected=selectedLocation
+                oninput=(action "inputChange")
+                onchange=(action (mut selectedLocation))
+                as |name|
+              }}
+                {{name}}
+              {{/power-select}}
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
